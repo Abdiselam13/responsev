@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+     list-style: none;
+     text-decoration: none;
+
+    }
+    header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px 10%;
+    }
+    .logo{
+        color: #13FF00;
+        font-size: 26px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .navlist{
+        display: flex;
+    }
+    .navlist a{
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 10px 20px;
+        transition: .3s;
+    }
+    .navlist .active{
+        color: #13FF00;
+    }
+    .navlist a:hover{
+        color: #13ff00;
+        filter: drop-shadow(0 0 25px#13ff00);
+    }
+    .navlist a:hover{
+        color: #fff;
+    }
+    #menu-icon{
+        color: #12ff00;
+        font-size: 35px;
+        z-index: 100001;
+        cursor: pointer;
+        display: none;
+    }
+    /* home-section */
+    section{
+        padding: 0 10%;
+    }
+    .container{
+        width: 100%;
+        height: 100vh;
+        background-image: url(../images/bac-img.png);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        display: grid;
+        align-items: center;
+    }
+    .cont-text h1{
+        color: #fff;
+        font-size: 44px;
+        font-weight: 700;
+        text-transform: capitalize;
+        line-height: 66px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px  #b09f9f;
+    }
+  .cont-text h1 span{
+    text-shadow: 0 0;
+    color: #12ff00;
+    text-transform: uppercase;
+  }
+  .cont-text p{
+    max-width: 520px;
+    color: #b09f9f;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px ;
+    margin-bottom: 30px;
+
+  }
+  .button{
+    display: flex;
+    align-items: center;
+  }
+  .button span i{
+    color: #fff;
+    font-size: 25px;
+    margin-right: 8px;
+    transition: .3s;
+  }
+  .btn1{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 30px;
+    transition: .3s;
+  }
+  .btn1:hover{
+    color: #13FF00;
+    text-decoration: underline #12ff00;
+     transform: translateY(-3px);
+  }
+  .btn2{
+    display:flex;
+    justify-content: center;
+    background: #12ff00;
+    padding: 8px 20px;
+    border-radius: 10px;
+    color: #202020;
+    font-size: 18px;
+    font-weight: 600;
+    transition: .3s;
+  }
+  .btn2 span i{
+    color: #202020;
+
+  }
+  .btn2:hover{
+    transform: translateY(-3px);
+  }
+  .social-icon{
+  position: absolute;
+  top: 42%;
+  right: 5%;
+  }
+  .social-icon i{
+    display: block;
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 30px;
+    transition: .3s;
+
+  }
+.social-icon i:hover{
+    color:#13ff00;
+    transform: translateY(-3px);
+    filter: drop-shadow(0 0 25px #13ff00);
+}
+
+/*resposive-website*/
+@media(max-width:1100px){
+    header{
+        padding: 25px 3%;
+        transition: .3s;
+    }
+    
+    section{
+        padding: 0 3%;
+        transition: .3s;
+    }
+}
+@media (max-width:1000px){
+    .cont-text h1{
+        font-size: 40px;
+        line-height: 55px;
+        transition: .3s;
+    }
+}
+@media (max-width:700px){
+    .social-icon i{
+        display: none;
+    }
+}
+@media(max-width:500px){
+    .cont-text h1{
+        font-size: 40px;
+        line-height: 55px;
+        transition: .3s;
+    }
+}
+@media(max-width:920px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #202020;
+        border-radius: 10px;
+        transition: .3s;
+    }
+    .navlist a{
+        display: block;
+        margin: 5px 0;
+        transition: .3s;
+    }
+    .navlist a:hover{
+        transform: translateY(5px);
+    }
+    .navlist.open{
+        right: 0;
+    }
+}
